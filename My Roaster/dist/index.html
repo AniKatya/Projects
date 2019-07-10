@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Roster</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <input type="text" id="input" placeholder="Type a team name">
+    <button onclick=fetchData()>Get Roster</button>
+    <br><br>
+    <script id="players-template" type="text/x-handlebars-template">
+        
+          {{#each this}}
+          <div class="box" style = "background-color: #ffcc66">
+          <div class="first-name">{{this.firstName}}</div>
+          <div class="last-name">{{this.lastName}}</div>
+          
+          <img src="https://nba-players.herokuapp.com/players/{{this.lastName}}/{{this.firstName}}" style = "background-color: lightgray">
+          <div class="jersey">{{this.jersey}}</div>
+          <div class="pos">{{this.pos}}</div>
+          </div>
+          {{/each}}
+        
+    </script>
+    <div class="result"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script src="jquery/dist/jquery.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

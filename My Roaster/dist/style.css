@@ -1,0 +1,23 @@
+html {
+    background-color: lightgoldenrodyellow;
+}
+
+.result{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;   
+    grid-row-gap: 50px; 
+    grid-column-gap: 50px;
+}
+
+.box{
+    text-align: center;
+}
+
+input{
+    width: 70%;
+}
+
+button{
+    width: 20%;
+}

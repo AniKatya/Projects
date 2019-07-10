@@ -16,6 +16,8 @@
         <div class="buttons">
             <button onclick=loadData()>Load User Data</button>
             <button onclick=renderData()>Display User</button>
+            <button onclick=saveToLocalStorage()>Save User Page</button>
+            <button onclick=loadFromLocalStorage()>Load User Page</button>
         </div>
         <div class="user-container"></div>
         <div class="quote-container"></div>
@@ -29,13 +31,14 @@
             </div>
         </div>
     </div>
+    
     <!-- ------------------------------- -->
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <script id="user-template" type="text/x-handlebars-template">
         <div id = "profile-pic" style = "background-image: url({{picture.medium}})"></div>
         <div class="user-info">
-            <div>{{name.first}} {{name.last}}</div>
+            <div>{{toProperCase name.first}} {{toProperCase name.last}}</div>
             <div>{{location.city}}, {{location.state}}</div>
         </div>
     </script>
@@ -43,7 +46,7 @@
     <script id="user-friends-template" type="text/x-handlebars-template">
         <ul class="user-friends">
             {{#each this}}
-            <li>{{this.name.first}} {{this.name.last}}</li> <br>
+            <li>{{toProperCase this.name.first}} {{toProperCase this.name.last}}</li> <br>
             {{/each}}
         </ul>
     </script>
