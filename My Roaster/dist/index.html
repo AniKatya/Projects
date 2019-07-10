@@ -14,11 +14,12 @@
     <script id="players-template" type="text/x-handlebars-template">
         
           {{#each this}}
-          <div class="box" style = "background-color: #ffcc66">
+          <div class="box">
           <div class="first-name">{{this.firstName}}</div>
           <div class="last-name">{{this.lastName}}</div>
           
-          <img src="https://nba-players.herokuapp.com/players/{{this.lastName}}/{{this.firstName}}" style = "background-color: lightgray">
+          <div class="img"><img src="https://nba-players.herokuapp.com/players/{{this.lastName}}/{{this.firstName}}" 
+            onerror="this.src='https://image1.masterfile.com/getImage/NzAwLTAwNTU0OTU5ZW4uMDAwMDAwMDA=AAw-ou/700-00554959en_Masterfile.jpg';"></div>
           <div class="jersey">{{this.jersey}}</div>
           <div class="pos">{{this.pos}}</div>
           </div>
