@@ -1,0 +1,12 @@
+#game-container {
+    display: grid;
+    justify-content: center;
+    grid-column-gap: 100px;
+    align-content: center;
+}
+
+.col {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+}

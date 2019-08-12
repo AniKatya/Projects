@@ -1,0 +1,51 @@
+
+.img {
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+}
+
+.movie-container{
+    position:relative;
+    float: left;
+}
+
+.rent-btn {
+    position: absolute;
+    right: 5px; 
+    top: 5px;
+    color:lightcoral;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%
+  }
+  
+  .rented-movie-container{
+    position: relative;
+    height: 300px;
+    width: 300px;
+    margin: 0 auto;
+    background-position: center;
+    overflow: hidden;
+    background-size: 300px 300px;
+}
+
+.unrent-btn {
+    position: absolute;
+    right: 5px; 
+    top: 5px;
+    color: lightgray;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%
+}
+
+.catalog {
+    font-size: 20px;
+}
+
+.rented-movies {
+    font-size: 20px;
+}
